@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#hunger {
+    position: absolute;
+    top: 94%;
+    left: 16.5%;
+    background-image: url('img/food.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
+}
+
+#thirst {
+    position: absolute;
+    top: 94%;
+    left: 19.5%;
+}
+
+.design {
+    transition: 1s;
+    background-image: url('img/food.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
+}
+
+.container div {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+    background-color: rgba(100, 100, 100,0.3);
+    border-radius: 1000px;
+    color: white;
+}
+
+.container canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img_icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 120%;
+    top: 18%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 2;
+}
+.img_icon_drink {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 18%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+    color: white;
+    z-index: 2;
+}
