@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 500px;
+    /* height: 270px; */
+    background-color: rgba(60,60,60,0.6);
+    border-radius: 4px;
+    border-bottom: 3px solid rgba(121, 6, 6,.8);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    animation: subir 1s;
+    transition: .5s;
+    font-family: 'Roboto Slab';
+}
+
+@keyframes subir {
+    0% {
+        top: 150%;
+    }
+    100% {top: 50%;}
+}
+
+.topo {
+    padding: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-image: linear-gradient(to bottom right,rgba(200,0,0,.8), rgba(121, 6, 6,.8));
+}
+
+#closebtn {
+    position: absolute;
+    top: 7%;
+    right: 3%;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Roboto Slab';
+    color: white;
+    font-size: 1.8em;
+}
+
+img {
+    overflow: hidden;
+}
+
+.meio {
+    padding: 5px;
+}
+
+.circle {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle a {
+	display: inline-block;
+	width: 110px;
+	height: 110px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+	overflow: hidden;
+	border-radius: 100%;
+}
+
+.circle a img {
+	width: 100%;
+	background-color: rgba(178, 190, 195,.8);
+}
+
+#nome_person {
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Pacifico';
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    top: -8px;
+}
+
+.infos {
+    padding: 4px;
+    color: rgb(210, 210, 210);
+    font-size: 0.9em;
+    margin: 5px;
+}
+
+
+.infos span {
+    color: rgb(250, 250, 250);
+    font-size: 0.9em;
+}
+.esquerda {
+    width: 30%;
+    float: left;
+    /* background-color: black; */
+}
+
+.direita {
+    width: 70%;
+    float: right;
+}
+
+
+.left {
+    width: 50%;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    float: right;
+}

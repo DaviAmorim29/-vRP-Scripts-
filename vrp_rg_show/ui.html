@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Roboto+Slab" rel="stylesheet">
+        <link rel="stylesheet" href="ui.css">
+    </head>
+
+    <body>
+        <div class="container" style="display: none;">
+            <header class="topo">
+                <h1 class="title">AmorimCity | RG</h1>
+            </header>
+            <div class="meio">
+                <div class="esquerda">
+                    <div class="circle">
+                        <a id="male"  style="display: none;" href="#"><img src="https://svgsilh.com/svg/303792.svg" width="180;"></a>
+                        <a id="female" style="display: none;" href="#"><img  src="https://svgsilh.com/svg/296989.svg" width="180;"></a>
+                    </div>
+                    <h2 id="nome_person"></h2>
+                </div>
+                <div class="direita">
+                    <h2 class="title" style="font-size: 1.3em;">Identidade</h2>
+                    <div class="infos">
+                        <div class="left">
+                            Idade: <span id="idade"></span></br>
+                            RG: <span id="rg"></span></br>
+                            Número: <span id="numero"></span></br>
+                            Passaporte: <span id="id"></span></br>
+                            Vip: <span id="vip"></span></br>
+                            Banco: <span id="banco"></span>
+                        </div>
+                        <div class="right">
+                            CNH: <span id="cnh"></span></br>
+                            Emprego: <span id="emprego"></span></br>
+                            Porte: <span id="porte"></span></br>
+                            Carteira: <span id="dinheiro"></span></br>
+                            Casa: <span id="home"></span> Nº<span id="number"></span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            window.addEventListener('message', function (event) {
+                if (event.data.open == true) {
+                    $(".container").css("display","block");
+                } else if (event.data.open == false) { $(".container").css("display","none"); }
+                if (event.data.type === "send") {
+                    $("#idade").html(event.data.idade);
+                    $("#rg").html(event.data.rg);
+                    $("#numero").html(event.data.numero);
+                    $("#casa").html(event.data.casa);
+                    $("#emprego").html(event.data.emprego);
+                    $("#id").html(event.data.id);
+                    $("#cnh").html(event.data.cnh);
+                    $("#porte").html(event.data.porte);
+                    $("#vip").html(event.data.vip);
+                    $("#nome_person").html(event.data.name);
+                    $("#dinheiro").html(event.data.dinheiro);
+                    $("#banco").html(event.data.banco);
+                    $("#home").html(event.data.home);
+                    $("#number").html(event.data.number);
+
+                    if (event.data.sex == true) {
+                        $("#male").css("display", "block");
+                    } else if (event.data.sex == 2) {
+                        $("#female").css("display", "block");
+                    }
+                }
+            })
+        })
+    </script>
+    </body>
+
+</html>
