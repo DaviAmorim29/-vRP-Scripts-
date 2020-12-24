@@ -1,0 +1,141 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="ui.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Montserrat');
+	.hvrbox {
+		margin: 7px;
+		margin-top: 25px;
+	}
+
+	.hvrbox,
+	.hvrbox * {
+		box-sizing: border-box;
+		cursor: pointer;
+		display: inline-block;
+	}
+
+	.hvrbox {
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.hvrbox img {
+		max-width: 42.7vw;
+	}
+
+	.hvrbox .hvrbox-layer_bottom {
+		display: block;
+	}
+
+	.hvrbox .hvrbox-layer_top {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		color: #fff;
+		padding: 15px;
+		-moz-transition: all 0.4s ease-in-out 0s;
+		-webkit-transition: all 0.4s ease-in-out 0s;
+		-ms-transition: all 0.4s ease-in-out 0s;
+		transition: all 0.4s ease-in-out 0s;
+	}
+
+	.hvrbox:hover .hvrbox-layer_top,
+	.hvrbox.active .hvrbox-layer_top {
+		opacity: 1;
+	}
+
+	.hvrbox .hvrbox-text {
+		text-align: center;
+		font-size: 18px;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	.hvrbox .hvrbox-text_mobile {
+		font-size: 15px;
+		border-top: 1px solid rgb(179, 179, 179);
+		/* for old browsers */
+		border-top: 1px solid rgba(179, 179, 179, 0.7);
+		margin-top: 5px;
+		padding-top: 2px;
+		display: none;
+	}
+
+	.hvrbox.active .hvrbox-text_mobile {
+		display: block;
+	}
+
+	@font-face {
+		src: url('gta-fonte.ttf');
+		font-family: gta;
+	}
+</style>
+
+<body style="background-color: #1e1766; overflow: hidden;">
+	<div class="main">
+		<header style="background-color: #130f40">
+			<a href="#" id="closebtn" style="font-size: 1.5em; color: white; cursor: pointer; position: absolute; top: 3px;
+				left: 6px; z-index: 10;"><i
+				 class="fas fa-window-close"></i></a>
+			<h1 class="text-center text-white" style="font-family: gta; font-size: 3em; position: relative; right: 5px;">GPS</h1>
+		</header>
+		<div class="secao" style="margin-top: 30px;">
+			<div class="row text-center" style="margin-bottom: 25px;">
+				<div class="col-12">
+					<div class="hvrbox">
+						<a href="marca.html" target="main-frame"><img src="destino.png" class="hvrbox-layer_bottom" width="190vw;">
+							<div class="hvrbox-layer_top">
+								<div class="hvrbox-text">Abrir Menu de Marcações</div>
+							</div>
+					</div>
+					</a>
+					<br>
+					<p style="font-size: 1em; font: bold; font-family: Montserrat; text-align: center; font-weight: 600; margin-top: 10px; color: white;">Marcações</p>
+				</div>
+				<!-- <div class="col-6">
+					<a href="#" id="mapa" style="cursor: pointer">
+						<div class="hvrbox">
+							<img src="https://www.pousadakauffmann.com.br/images/mapa.png" class="hvrbox-layer_bottom" width="190vw;">
+
+							<div class="hvrbox-layer_top">
+								<div class="hvrbox-text">Abrir mapa</div>
+							</div>
+						</div>
+					</a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="ui.js" type="text/javascript"></script>
+</body>
+
+</html>

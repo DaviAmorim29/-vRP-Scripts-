@@ -1,0 +1,238 @@
+@font-face {
+    src: url('fonte/gta-fonte.ttf');
+    font-family: gta;
+}
+
+@font-face {font-family: "unimed";
+    src: url("fonte/9db9dc103a477973ec547134988b2c57.eot"); /* IE9*/
+    src: url("fonte/9db9dc103a477973ec547134988b2c57.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("fonte/9db9dc103a477973ec547134988b2c57.woff2") format("woff2"), /* chrome、firefox */
+    url("fonte/9db9dc103a477973ec547134988b2c57.woff") format("woff"), /* chrome、firefox */
+    url("fonte/9db9dc103a477973ec547134988b2c57.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("fonte/9db9dc103a477973ec547134988b2c57.svg#Frutiger Next LT W06 Preto Cond") format("svg"); /* iOS 4.1- */
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: transparent;
+}
+
+/* KIT PAGO */
+.heal {
+    width: 350px;
+    border-bottom: 2px solid rgb(180, 1, 1);
+    background-color: rgba(160, 160, 160, .7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    display: none;
+}
+
+.healfree {
+    width: 350px;
+    border-bottom: 2px solid rgb(180, 1, 1);
+    background-color: rgba(160, 160, 160, .7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    display: none;
+}
+
+.topo {
+    padding: 3px;
+    background-image: linear-gradient(to bottom right, rgba(200,0,0,.8), rgba(121, 6, 6,.8));
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.title{
+    text-align: center;
+    font-family: 'gta';
+    color: white;
+    font-size: 2em;
+}
+
+.sub {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#kit-pago {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(130, 130, 130, .8);
+    border: 1px solid rgb(180, 1, 1);
+    font-weight: 500;
+    font-family: 'poppins';
+    border-radius: 4px;
+    margin-bottom: 13px;
+    cursor: pointer;
+    transition: .4s;
+    color: white;
+}
+
+#kit-free {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(130, 130, 130, .8);
+    border: 1px solid rgb(180, 1, 1);
+    font-weight: 500;
+    font-family: 'poppins';
+    border-radius: 4px;
+    margin-bottom: 13px;
+    cursor: pointer;
+    transition: .4s;
+    color: white;
+}
+
+#kit-free:hover {
+    background-color: rgba(210, 210, 210, .6);
+    color: black;
+}
+
+#kit-pago:hover {
+    background-color: rgba(210, 210, 210, .6);
+    color: black;
+}
+
+#closebtn {
+    position: absolute;
+    top: 6%;
+    right: 2%;
+    color: white;
+    font-size: 1.1em;
+    z-index: 10;
+}
+
+/* FIM KIT PAGO */
+
+.buy {
+    width: 700px;
+    height: 400px;
+    border-radius: 6px;
+    background-image: url(img/fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;s
+}
+
+.area {
+    height: 280px;
+    width: 685px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 4px;
+}
+
+#logo {
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    width: 200px;
+}
+
+#assinar {
+    background-color: rgb(192, 206, 76);
+    padding: 16px;
+    text-align: center;
+    border: 2px solid rgb(0, 148, 86);
+    font-size: 1.7em;
+    border-radius: 4px;
+    color: white;
+    font-family: 'unimed';
+    position: absolute;
+    top: 60%;
+    right: 7%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#assinar:hover{
+    transform: scale(1.02);
+    box-shadow: 7px 7px 15px -5px rgba(0,0,0,0.64);
+}
+
+.lado {
+    padding: 10px;
+    width: 50%;
+    margin: 10px;
+    font-size: 1em;
+    font-family: 'unimed';
+    list-style: none;
+}
+
+.lado ul {
+    list-style: none;
+}
+
+ul li {
+    color:rgb(192, 206, 76);
+    font-size: 0.97em;
+    list-style-type: disc;
+    margin-bottom: 15px;
+}
+
+ul li h1 {
+    font-family: unimed;
+    /* color: rgb(192, 206, 76); */
+    color: rgb(0, 148, 86);
+    letter-spacing: 3px;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.imagems {
+    position: absolute;
+    top: -23%;
+    left: 1%;
+    width: 150px;
+}
+
+#fechar {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    position: absolute;
+    top: 5.5%;
+    right: 2%;
+    color: white;
+}
+
+#fechar:focus {
+    border: none;
+    outline: none;
+}
+
+.fechar2 {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    position: absolute;
+    top: 5.5%;
+    right: 2%;
+    color: white;
+}
+
+.fechar2:focus {
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,82 @@
+local Tunnel = module("vrp", "lib/Tunnel")
+local Proxy = module("vrp", "lib/Proxy")
+
+vRP = Proxy.getInterface("vRP")
+vRPclient = Tunnel.getInterface("vRP","vrp_gps")
+
+RegisterCommand("gps",function(source)
+	    local source = source
+	    local user_id = vRP.getUserId({source})
+        local player = vRP.getUserSource({user_id})
+		if (vRP.getInventoryItemAmount({user_id, "gps"}) >=1) then
+		CancelEvent()
+		TriggerClientEvent("gps", source)
+		else
+		TriggerClientEvent("notify", source)
+		end
+end)
+-- As Funções do GPS --
+RegisterServerEvent("praca")
+AddEventHandler("praca",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {162.1234588623,-1009.3255004883,29.524169921875})
+	vRPclient.notify(player, {"~g~Você marcou a praça, tenha uma boa viagem !"})
+end)
+
+RegisterServerEvent("academia")
+AddEventHandler("academia",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {-1188.7629394531,-1565.4423828125,4.2866630554199})
+	vRPclient.notify(player, {"~g~Você marcou a academia, tenha uma boa viagem !"})
+end)
+
+RegisterServerEvent("hospital")
+AddEventHandler("hospital",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {316.2907409668,-1373.7326660156,31.915143966675})
+	vRPclient.notify(player, {"~g~Você marcou o hospital, tenha uma boa viagem !"})
+end)
+
+RegisterServerEvent("delegacia")
+AddEventHandler("delegacia",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {412.75271606445,-979.11059570313,29.423854827881})
+	vRPclient.notify(player, {"~g~Você marcou a delegacia, tenha uma boa viagem !"})
+end)
+
+RegisterServerEvent("concessionaria")
+AddEventHandler("concessionaria",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {-64.778335571289,-1108.8958740234,26.221155166626})
+	vRPclient.notify(player, {"~g~Você marcou a concessionária, tenha uma boa viagem !"})
+end)
+
+RegisterServerEvent("agencia")
+AddEventHandler("agencia",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {-266.821,-960.292,31.223-1.0001})
+	vRPclient.notify(player, {"~g~Você marcou a agencia de empregos, tenha uma boa viagem !"})
+end)
+
+RegisterServerEvent("favela")
+AddEventHandler("favela",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {1219.8629150391,-287.93539428711,69.149894714355})
+	vRPclient.notify(player, {"~g~Você marcou a favela da barragem, tenha cuidado com sua viagem !"})
+end)
+
+RegisterServerEvent("strip")
+AddEventHandler("strip",function()
+local user_id = vRP.getUserId({source})
+local player = vRP.getUserSource({user_id})
+    vRPclient.setGPS(player, {117.19,-1294.86,28.42})
+	vRPclient.notify(player, {"~g~Você marcou o StripClub, tenha cuidado com a mulher !"})
+end)
+

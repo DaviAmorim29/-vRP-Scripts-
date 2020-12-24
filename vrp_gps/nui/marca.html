@@ -1,0 +1,246 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    @font-face {
+        src: url('gta-fonte.ttf');
+        font-family: gta;
+    }
+
+
+    .hvrbox,
+    .hvrbox * {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .hvrbox {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .hvrbox .hvrbox-layer_bottom {
+        display: block;
+    }
+
+    .hvrbox .hvrbox-layer_top {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 15px;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    .hvrbox:hover .hvrbox-layer_top,
+    .hvrbox.active .hvrbox-layer_top {
+        opacity: 1;
+    }
+
+    .hvrbox .hvrbox-text {
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .hvrbox .hvrbox-text_mobile {
+        font-size: 15px;
+        border-top: 1px solid rgb(179, 179, 179);
+        /* for old browsers */
+        border-top: 1px solid rgba(179, 179, 179, 0.7);
+        margin-top: 5px;
+        padding-top: 2px;
+        display: none;
+    }
+
+    .hvrbox.active .hvrbox-text_mobile {
+        display: block;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar {
+        width: 7px;
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        border: 2px solid #555555;
+    }
+
+    p {
+        font-weight: 600;
+        font-family: 'Montserrat';
+        font-size: 1.1em;
+    }
+
+    button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    button:focus {
+        border: none;
+        outline: none;
+    }
+
+    .hvrbox img {
+        width: 19vw;
+        height: 15vw;
+        overflow: hidden;
+        border-radius: 3px;
+    }
+
+    .row {
+        margin-bottom: 15px;
+    }
+</style>
+
+<body style="background-color: #1e1766; overflow-x: hidden">
+    <div class="main">
+        <header style="background-color: #130f40">
+            <a class="float-left" href="main.html" target="main-frame" style="font-size: 1.5em; color: white;"><i class="fas fa-arrow-circle-left"></i></a>
+            <h1 class="text-center text-white" style="font-family: gta; font-size: 3em;">Marcações</h1>
+        </header>
+        <div class="secao" style="padding: 10px;">
+            <div class="row text-center">
+                <div class="col-4">
+                    <button id="hospital">
+                        <div class="hvrbox">
+                            <img src="https://pngimage.net/wp-content/uploads/2018/06/simbolo-hospital-png-6.png" class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">Marcar Hospital</div>
+                            </div>
+                        </div>
+                    </button> <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Hospital</h5>
+                </div>
+
+                <div class="col-4">
+                    <button id="delegacia">
+                        <div class="hvrbox">
+                            <img src="delega.png" class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">Marcar Delegacia</div>
+                            </div>
+                        </div>
+                    </button>
+                    <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Delegacia</h5>
+
+                </div>
+
+                <div class="col-4">
+                    <button id="praca">
+                        <div class="hvrbox">
+                            <img src="http://portal.iphan.gov.br/uploads/ckfinder/images/Diversas/AM_Manaus/dsc_0442(2).jpg"
+                                class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">Marcar Praça</div>
+                            </div>
+                        </div>
+                    </button>
+                    <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Praça</h5>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-4">
+                    <button id="academia">
+                        <div class="hvrbox">
+                            <img src="https://www.gazetadopovo.com.br/viver-bem/wp-content/uploads/2018/02/academia-limpeza-bacteria-600x400.jpg"
+                                class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">Marcar Academia</div>
+                            </div>
+                        </div>
+                    </button>
+                    <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Academia</h5>
+                </div>
+
+                <div class="col-4">
+                    <button id="concessionaria">
+                        <div class="hvrbox">
+                            <img src="https://www.autoindustria.com.br/wp-content/uploads/2018/01/concession%C3%A1ria-jeep-externa-foto-Luiz-Oswaldo-Palermo.jpg"
+                                class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text" style="font-size: 0.9em;"> Marcar Concessionaria</div>
+                            </div>
+                        </div>
+                    </button>
+                    <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Concessionaria</h5>
+                </div>
+
+                <div class="col-4">
+                    <button id="agencia">
+                        <div class="hvrbox">
+                            <img src="http://www.tibahia.com/upload/images/2013-10-17/20131017030751_agencia-emprego-jovem-2.jpg"
+                                class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">Marcar Agencia</div>
+                            </div>
+                        </div>
+                    </button>
+                    <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Agencia
+                        de Empregos</h5>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-4">
+                    <button id="favela">
+                        <div class="hvrbox">
+                            <img src="https://f.i.uol.com.br/fotografia/2018/04/26/15247942385ae2837ea3436_1524794238_3x2_md.jpg"
+                                class="hvrbox-layer_bottom">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">Marcar Favela</div>
+                            </div>
+                        </div>
+                    </button>
+                    <br>
+                    <h5 class="text-center text-white" style="font-family: Montserrat; font: bold; font-weight: 600; margin-top: 5px;margin-bottom: 5px; font-size: 1em;">Favela Barragem</h5>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

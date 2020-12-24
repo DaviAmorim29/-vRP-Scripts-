@@ -1,0 +1,75 @@
+/*
+  __  __           _            _                 _  __                         _____  
+ |  \/  |         | |          | |               | |/ /                        |  __ \ 
+ | \  / | __ _  __| | ___      | |__  _   _      | ' / __ _ ___ _ __   ___ _ __| |__) |
+ | |\/| |/ _` |/ _` |/ _ \     | '_ \| | | |     |  < / _` / __| '_ \ / _ \ '__|  _  / 
+ | |  | | (_| | (_| |  __/     | |_) | |_| |     | . \ (_| \__ \ |_) |  __/ |  | | \ \ 
+ |_|  |_|\__,_|\__,_|\___|     |_.__/ \__, |     |_|\_\__,_|___/ .__/ \___|_|  |_|  \_\
+                                       __/ |                   | |                     
+                                      |___/                    |_|                     
+
+  Author: Kasper Rasmussen
+  Steam: https://steamcommunity.com/id/kasperrasmussen
+*/
+
+$(document).ready(function () {
+  $(".container").hide();
+  window.addEventListener('message', function (event) {
+    var item = event.data;
+    if (item.show == true) {
+      open();
+      openKeybinds();
+    }
+    if (item.show == false) {
+      close();
+    }
+  });
+  document.onkeyup = function (data) {
+    if (data.which == 27) {
+      $.post('http://vrp_ajuda/close', JSON.stringify({}));
+    }
+  };
+  $(".btnClose").click(function () {
+    $.post('http://vrp_ajuda/close', JSON.stringify({}));
+  });
+});
+
+function open() {
+  //$(".container").css("display", "block");
+  $(".container").fadeIn();
+  $('.keybinds').scrollTop(0);
+  $('.rules').scrollTop(0);
+}
+function close() {
+  //$(".container").css("display", "none");
+  $(".container").fadeOut();
+  $("#home").css("display", "none");
+  $("#keybinds").css("display", "none");
+  $("#rules").css("display", "none");
+  $("#info").css("display", "none");
+}
+function openKeybinds() {
+  $("#home").css("display", "none");
+  $("#keybinds").css("display", "block");
+  $("#rules").css("display", "none");
+  $("#info").css("display", "none");
+  $(".nav-item").attr("class", "nav-item");
+  $("#btnKeybinds").attr("class", "nav-item active");
+  $('.keybinds').scrollTop(0);
+}
+function openRules() {
+  $("#home").css("display", "none");
+  $("#keybinds").css("display", "none");
+  $("#rules").css("display", "block");
+  $("#info").css("display", "none");
+  $(".nav-item").attr("class", "nav-item");
+  $("#btnRules").attr("class", "nav-item active");
+}
+function openInfo() {
+  $("#home").css("display", "none");
+  $("#keybinds").css("display", "none");
+  $("#rules").css("display", "none");
+  $("#info").css("display", "block");
+  $(".nav-item").attr("class", "nav-item");
+  $("#btnInfo").attr("class", "nav-item active");
+}

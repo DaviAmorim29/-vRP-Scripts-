@@ -19,7 +19,7 @@ body {
     left: 50%;
     animation: subir 1s;
     transition: .5s;
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab'
 }
 
 @keyframes subir {
